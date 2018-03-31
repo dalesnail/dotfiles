@@ -7,7 +7,8 @@ from distutils.dir_util import copy_tree
 import subprocess
 
 '''''''''''''''
-This will pull all configs from around the machine into this one repo after edits are made, for organizational purposes. Just make it a common practice to run this after making chnges to a config you will be keeping, and uploading to github.
+This will pull all configs from around the machine into this one repo after edits are made, for organizational purposes. 
+Just make it a common practice to run this after making chnges to a config you will be keeping, and uploading to github.
 '''''''''''''''
 
 # No place like ~/
