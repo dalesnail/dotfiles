@@ -8,7 +8,7 @@ import subprocess
 
 '''''''''''''''
 This will pull all configs from around the machine into this one repo after edits are made, for organizational purposes. 
-Just make it a common practice to run this after making chnges to a config you will be keeping, and uploading to github.
+Just make it a common practice to run this after making changes to a config you will be keeping, and uploading to github.
 '''''''''''''''
 
 # No place like ~/
