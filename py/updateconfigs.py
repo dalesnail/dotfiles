@@ -5,23 +5,16 @@ from os.path import expanduser
 from shutil import copyfile
 from distutils.dir_util import copy_tree
 
-'''''''''''''''
+'''
 This will pull all configs from around the machine into this one repo after edits are made, for organizational purposes. 
 Just make it a common practice to run this after making changes to a config you will be keeping, and uploading to github.
-'''''''''''''''
+'''
 
 # No place like ~/
 home = expanduser("~")
 
 
-'''''''''''''''''''''''''''''''''
-'''' ~Config File Locations~ ''''
-''''-------------------------''''
-'''''''''''''''''''''''''''''''''
-
-###############
-## On the PC ##
-###############
+# On the PC #
 
 # BashRC
 bash = home + '/.bashrc'
@@ -36,9 +29,8 @@ nvim = home + '/.config/nvim/init.vim'
 ncolors = home + '/.config/nvim/colors/'
 
 
-################################
-## In the .dotfiles Directory ##
-################################
+
+# In the .dotfiles Directory #
 
 # Neovim Folder
 dotnvim = home + '/.dotfiles/dotfiles/nvim/'
@@ -50,24 +42,18 @@ dotfirefox = home + '/.dotfiles/dotfiles/chrome/'
 dotvimcolors = dotnvim + 'colors/'
 
 
-##########################
 ## ~/.dotfiles/dotfiles ##
-##########################
 
 dotdir = home + '/.dotfiles/dotfiles/'
 
 
-#########
 ## bak ##
-#########
 
 bak = home + '/.dotfiles/bak/'
 copy_tree(dotdir, bak)
 
 
-###################
-## File Movement ##
-###################
+# File Movement #
 
 copyfile(bash, dotdir + '.bashrc')
 copy_tree(firefox, dotfirefox)
