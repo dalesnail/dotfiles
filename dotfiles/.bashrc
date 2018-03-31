@@ -36,7 +36,8 @@ alias backup='duplicity ~ b2://340449f49689:00000589318f701e4bd6b78546c942f1b50e
 alias dotfiles-push='git push -u origin master'
 alias dotfiles-commit="git commit -m 'Configuration update'"
 alias dotfiles-pull='python ~/.dotfiles/py/updateconfigs.py'
-
+alias dotfiles-superpush='python ~/.dotfiles/py/superpush.py'
+alias dotfiles-plush='dotfiles-pull && dotfiles-superpush'
 
 neofetch
 
