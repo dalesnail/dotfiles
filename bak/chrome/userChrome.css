@@ -1,0 +1,26 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* URL-Bar: Hide */
+#nav-bar{
+overflow-y: hidden !important;
+margin-bottom:-2.70em;
+min-height: 0 !important;
+max-height: 0 !important;
+opacity: 0;
+transition: opacity 0.2s, max-height 0.2s;
+}
+
+:hover>#nav-bar{
+max-height:2.70em !important;
+opacity:1;
+transition:opacity 0.2s;
+}
+
+/* Disable Favicons*/
+.tabbrowser-tab .tab-icon-image,
+.tabbrowser-tab .tab-throbber { display:none!important; }
+
+#personal-bookmarks .toolbarbutton-icon { display:none!important; }
+
+/* Top Margin Fix */
+#content-deck{margin-top:0.7em !important;}
