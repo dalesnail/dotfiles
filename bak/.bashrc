@@ -35,6 +35,7 @@ alias themite='python ~/.config/termite/py/random_theme.py'
 alias backup='duplicity ~ b2://340449f49689:00000589318f701e4bd6b78546c942f1b50e546505@Laptop-Archlabs'
 alias dotfiles-push='git push -u origin master'
 alias dotfiles-commit="git commit -m 'Configuration update'"
+alias dotfiles-pull='python ~/.dotfiles/py/updateconfigs.py
 
 
 neofetch
