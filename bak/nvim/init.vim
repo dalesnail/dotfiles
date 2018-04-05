@@ -16,9 +16,9 @@ endif
 " Vim-Plug
 call plug#begin('~/.config/nvim/plugged')
 
-" Autoinstall
-autocmd VimEnter * PlugInstall
-autocmd VimEnter * q
+" Autoinstall - Leaving here to remind you of your mistakes
+" autocmd VimEnter * PlugInstall
+" autocmd VimEnter * q
 
 " fzf
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -31,5 +31,8 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+call plug#end()
+
+" Color Stuff
 syntax on
 colorscheme sorcerer

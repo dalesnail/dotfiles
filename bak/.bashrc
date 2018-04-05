@@ -38,6 +38,8 @@ alias dotfiles-commit="git commit -m 'Configuration update'"
 alias dotfiles-pull='python ~/.dotfiles/py/updateconfigs.py'
 alias dotfiles-superpush='python ~/.dotfiles/py/superpush.py'
 alias dotfiles-plush='dotfiles-pull && dotfiles-superpush'
+alias orphans='sudo pacman -Rns $(pacman -Qtdq)'
+
 
 neofetch
 
