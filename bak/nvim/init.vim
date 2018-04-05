@@ -31,8 +31,36 @@ Plug 'roxma/nvim-completion-manager'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+" Fancy Start
+Plug 'mhinz/vim-startify'
+
 call plug#end()
 
 " Color Stuff
 syntax on
 colorscheme sorcerer
+
+" Text Stuff
+set encoding=utf-8
+let g:airline_powerline_fonts = 1
+let g:airline_theme='minimalist'
+
+" Header
+function! s:filter_header(lines) abort
+	let longest_line = max(map(copy(a:lines), 'strwidth(v:val)'))
+	let centered_lines = map(copy(a:lines),
+				\ 'repeat(" ", (&columns / 2) - (longest_line / 2)) . v:val')
+	return centered_lines
+endfunction
+let g:startify_custom_header = [
+			\'',
+			\'',
+			\'          ██████╗  █████╗ ██╗     ███████╗    ██╗  ██╗    ███████╗███╗   ██╗ █████╗ ██╗██╗     ', 
+			\'          ██╔══██╗██╔══██╗██║     ██╔════╝    ╚██╗██╔╝    ██╔════╝████╗  ██║██╔══██╗██║██║     ',
+			\'          ██║  ██║███████║██║     █████╗       ╚███╔╝     ███████╗██╔██╗ ██║███████║██║██║     ',
+			\'          ██║  ██║██╔══██║██║     ██╔══╝       ██╔██╗     ╚════██║██║╚██╗██║██╔══██║██║██║     ',
+			\'          ██████╔╝██║  ██║███████╗███████╗    ██╔╝ ██╗    ███████║██║ ╚████║██║  ██║██║███████╗',
+			\'          ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝╚══════╝',
+			\'',
+			\'',
+			\]

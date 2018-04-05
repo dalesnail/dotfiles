@@ -12,50 +12,52 @@ Just make it a common practice to run this after making changes to a config you 
 
 # No place like ~/
 home = expanduser("~")
+## ~/.dotfiles/dotfiles ##
+dotdir = home + '/.dotfiles/dotfiles/'
+## .config ##
+config = home + '/.config'
 
-
+#############
 # On the PC #
+#############
 
 # BashRC
 bash = home + '/.bashrc'
-
 # Firefox CSS
 firefox = home + '/.mozilla/chrome/'
-
 # Neovim RC - init.vim
-nvim = home + '/.config/nvim/init.vim'
-
+nvim = config + '/nvim/init.vim'
 # Neovim Colors folder
-ncolors = home + '/.config/nvim/colors/'
+ncolors = config + '/nvim/colors/'
+# Ranger config 
+ranger = config + '/ranger'
 
-
-
+##############################
 # In the .dotfiles Directory #
+##############################
 
 # Neovim Folder
-dotnvim = home + '/.dotfiles/dotfiles/nvim/'
-
+dotnvim = dotdir + '/nvim/'
 # Firefox chrome folder
-dotfirefox = home + '/.dotfiles/dotfiles/chrome/'
-
+dotfirefox = dotdir + '/chrome/'
 # Colors Nvim
-dotvimcolors = dotnvim + 'colors/'
+dotvimcolors = dotnvim + '/nvim/colors/'
+# Ranger config 
+dotranger = dotdir + '/ranger/'
 
 
-## ~/.dotfiles/dotfiles ##
-
-dotdir = home + '/.dotfiles/dotfiles/'
-
-
+#########
 ## bak ##
+#########
 
 bak = home + '/.dotfiles/bak/'
 copy_tree(dotdir, bak)
 
-
+#################
 # File Movement #
-
+#################
 copyfile(bash, dotdir + '.bashrc')
 copy_tree(firefox, dotfirefox)
 copyfile(nvim, dotnvim + 'init.vim')
 copy_tree(ncolors, dotvimcolors)
+copy_tree(ranger, dotranger)
