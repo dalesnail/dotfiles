@@ -6,7 +6,7 @@
 "#  ╚═════╝ ╚═╝  ╚═╝╚══════╝╚══════╝    ╚═╝  ╚═╝    ╚══════╝╚═╝  ╚═══╝╚═╝  ╚═╝╚═╝╚══════╝
 "#  Nvim init.vim
 
-
+set mouse=a
 
 " 256 bit color
 if  $TERM == "xterm-256color"
@@ -44,6 +44,7 @@ colorscheme sorcerer
 set encoding=utf-8
 let g:airline_powerline_fonts = 1
 let g:airline_theme='minimalist'
+let g:airline#extensions#tabline#enabled = 1
 
 " Header
 function! s:filter_header(lines) abort
