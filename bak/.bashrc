@@ -31,7 +31,7 @@ alias pac='sudo pacman --color auto'
 alias merge='xrdb -merge ~/.Xresources'
 alias update-grub='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 alias mirrors='sudo reflector --score 100 --fastest 25 --sort rate --save /etc/pacman.d/mirrorlist --verbose'
-alias themite='python ~/.config/termite/py/random_theme.py'
+alias themite='python ~/.config/termite/py/themite.py'
 alias backup='duplicity ~ b2://340449f49689:00000589318f701e4bd6b78546c942f1b50e546505@Laptop-Archlabs'
 alias dotfiles-push='git push -u origin master'
 alias dotfiles-commit="git commit -m 'Configuration update'"
@@ -40,6 +40,11 @@ alias dotfiles-superpush='python ~/.dotfiles/py/superpush.py'
 alias dotfiles-plush='dotfiles-pull && dotfiles-superpush'
 alias orphans='sudo pacman -Rns $(pacman -Qtdq)'
 
+#powerline
+powerline-daemon -q
+POWERLINE_BASH_CONTINUATION=1
+POWERLINE_BASH_SELECT=1
+. /usr/lib/python3.6/site-packages/powerline/bindings/bash/powerline.sh
 
 neofetch
 
