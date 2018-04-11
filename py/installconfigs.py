@@ -31,6 +31,8 @@ nvim = config + '/nvim/init.vim'
 ncolors = config + '/nvim/colors/'
 # Ranger config 
 ranger = config + '/ranger'
+# Polybar
+polybar = config + '/polybar'
 
 ##############################
 # In the .dotfiles Directory #
@@ -44,6 +46,8 @@ dotfirefox = dotdir + '/chrome/'
 dotvimcolors = dotnvim + '/nvim/colors/'
 # Ranger config 
 dotranger = dotdir + '/ranger/'
+# Polybar
+dotpolybar = dotdir + '/polybar/'
 
 
 #########
@@ -61,3 +65,5 @@ copy_tree(dotfirefox, firefox)
 copyfile(dotnvim + 'init.vim', nvim)
 copy_tree(dotvimcolors, ncolors)
 copy_tree(dotranger, ranger)
+copy_tree(dotpolybar, polybar)
+
