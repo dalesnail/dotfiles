@@ -19,7 +19,11 @@ monitor =
 
 modules-left   = jgmenu workspaces
 modules-center = window_switch clock
+<<<<<<< HEAD
 modules-right  = pkg memory temperature coreuse network volume battery
+=======
+modules-right  = pkg memory temperature coreuse network volume
+>>>>>>> 4a6de8d287e5cab3dc888b32f84f399afaec21e3
 
 
 ;=====================================================
