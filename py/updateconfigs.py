@@ -33,7 +33,8 @@ ncolors = config + '/nvim/colors/'
 ranger = config + '/ranger'
 # Polybar
 polybar = config + '/polybar'
-
+# Themes
+themes = '/usr/share/themes/'
 
 ##############################
 # In the .dotfiles Directory #
@@ -49,6 +50,9 @@ dotvimcolors = dotnvim + '/nvim/colors/'
 dotranger = dotdir + '/ranger/'
 # Polybar
 dotpolybar = dotdir + '/polybar/'
+# themes
+dotthemes = dotdir + '/themes/'
+
 
 #########
 ## bak ##
@@ -66,3 +70,4 @@ copyfile(nvim, dotnvim + 'init.vim')
 copy_tree(ncolors, dotvimcolors)
 copy_tree(ranger, dotranger)
 copy_tree(polybar, dotpolybar)
+copy_tree(themes, dotthemes)
