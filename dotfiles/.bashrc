@@ -41,6 +41,8 @@ alias dotfiles-plush='dotfiles-pull && dotfiles-superpush'
 alias orphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias colors='clear && ~/.config/themite/color.sh'
 alias dotfiles-install='python ~/.dotfiles/py/installconfigs.py'
+alias docker='sudo docker'
+alias droplet='ssh dalesnail@159.89.43.201'
 
 #powerline
 powerline-daemon -q
